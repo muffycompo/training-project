@@ -27,7 +27,7 @@
                 Hello, John Doe
             </button>
             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <li><a class="dropdown-item" href="index.php">Logout</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
             </ul>
             </div>
     </div>
@@ -45,7 +45,7 @@
                 </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/templates/users.php">
+                    <a class="nav-link" href="/users/users.php">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                         <span class="ml-2">Users</span>
                     </a>
@@ -77,16 +77,70 @@
             </ul>
         </div>
     </nav>
+          
           <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
               <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Users</li>
                   </ol>
               </nav>
-              <h1 class="h2">Dashboard</h1>
-              <p>Welcome back, <span class="font-weight-bold">John Doe</span>. Use the navigation links on the left to manage your records.</p>
-              
+              <h1 class="h2">Manage Users</h1>
+              <div class="row">
+                  <div class="col-12 mb-4 mb-lg-0">
+                      <div class="card">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                          <h5 class="mb-0">Users</h5>
+                          <div>
+                            <a href="#" class="btn btn-sm btn-primary">New User</a>
+                          </div>
+                        </div>
+                          <div class="card-body">
+                              <div class="table-responsive">
+                                  <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th scope="col">Staff ID</th>
+                                          <th scope="col">Name</th>
+                                          <th scope="col">Email</th>
+                                          <th scope="col">Phone</th>
+                                          <th scope="col">Role</th>
+                                          <th scope="col">Date</th>
+                                          <th scope="col"></th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <th scope="row">123456</th>
+                                          <td>John Doe</td>
+                                          <td>johndoe@gmail.com</td>
+                                          <td>08012341234</td>
+                                          <td>doctor</td>
+                                          <td>06/05/2024</td>
+                                          <td class="text-center">
+                                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">123457</th>
+                                          <td>Jane Doe</td>
+                                          <td>janedoe@gmail.com</td>
+                                          <td>08012341234</td>
+                                          <td>pharmacist</td>
+                                          <td>06/05/2024</td>
+                                          <td class="text-center">
+                                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                                            <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               <footer class="pt-5 d-flex justify-content-between">
                   <span>Copyright © 2024 <a href="#">Backend Project</a></span>
                   <ul class="nav m-0">
@@ -104,8 +158,5 @@
           </main>
       </div>
 </div>
-</div>
-    <script src="/js/popper.min.js" ></script>
-    <script src="/js/bootstrap.min.js"></script>
-</body>
-</html>
+
+<?php include('../layout/footer.php'); ?>

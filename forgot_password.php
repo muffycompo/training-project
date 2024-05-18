@@ -1,8 +1,13 @@
-<?php 
-include('application/start.php');
-include('layout/header.php');
-?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Project</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
 <div class="container-fluid">
         <div class="row">
             <main class="col-md-12 ml-sm-auto col-lg-10 px-md-4 py-4">
@@ -40,4 +45,8 @@ include('layout/header.php');
             </main>
         </div>
 
-<?php include('layout/footer.php'); ?>
+        </div>
+    <script src="/js/popper.min.js" ></script>
+    <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
