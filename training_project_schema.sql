@@ -22,9 +22,9 @@ CREATE TABLE `medications` (
 CREATE TABLE `patients` (
   `id` int NOT NULL AUTO_INCREMENT,
   `file_number` varchar(100) NOT NULL,
-  `first_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `last_name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `gender` varchar(11) NOT NULL DEFAULT 'Male',
   `home_address` text NOT NULL,
   `phone` varchar(11) NOT NULL,
@@ -51,10 +51,10 @@ CREATE TABLE `roles` (
 
 CREATE TABLE `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` varchar(100) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(255) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
   `role_id` int NOT NULL,
   `created_at` datetime DEFAULT NULL,
