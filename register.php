@@ -14,24 +14,36 @@
                 <div class="row mt-4">
                     <div class="col-4 offset-3 mb-4 mb-lg-0">
                         <div class="card">
-                            <form action="dashboard.php">
+                            <form method="post" action="reg_submit.php">
                               <div class="card-body">
                                 <div class="mb-3">
-                                  <h1 class="h2">Login</h1>
+                                  <h1 class="h2">Register</h1>
                                 </div>
+                                  <div class="form-group mb-3">
+                                      <label for="name" class="form-label font-weight-bold">Name</label>
+                                      <input id="name" class="form-control" name="name" type="text">
+                                  </div>
                                   <div class="form-group mb-3">
                                       <label for="email" class="form-label font-weight-bold">Email Address</label>
                                       <input id="email" class="form-control" name="email" type="email">
                                   </div>
                                   <div class="form-group mb-3">
+                                      <label for="phone" class="form-label font-weight-bold">Phone Number</label>
+                                      <input id="phone" class="form-control" name="phone" type="text">
+                                  </div>
+                                  <div class="form-group mb-3">
                                     <label for="password" class="form-label font-weight-bold">Password</label>
                                     <input id="password" class="form-control" name="password" type="password">
                                 </div>
+                                  <div class="form-group mb-3">
+                                    <label for="confirm_password" class="form-label font-weight-bold">Confirm Password</label>
+                                    <input id="confirm_password" class="form-control" name="confirm_password" type="password">
+                                </div>
                                 <div class="mb-3">
-                                  <a href="forgot_password.php">Forgot password?</a>
+                                  <a href="index.php">Login</a>
                                 </div>
                                 <div class="d-flex justify-content-end">
-                                  <button type="submit" class="btn btn-primary">Login</button>
+                                  <button type="submit" class="btn btn-primary">Register</button>
                                 </div>
                               </div>
                             </form>
