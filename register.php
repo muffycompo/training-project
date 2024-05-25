@@ -1,3 +1,9 @@
+<?php 
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +22,26 @@
                         <div class="card">
                             <form method="post" action="reg_submit.php">
                               <div class="card-body">
+                                
+                                <?php
+                                
+                                  if (isset($_SESSION['error'])) {
+                                    $error_message = $_SESSION['error'];
+                                    
+                                    unset($_SESSION['error']);
+
+                                    echo '<div class="alert alert-danger">'.$error_message.'</div>';
+                                  }
+                                
+                                ?>
+                              
+
                                 <div class="mb-3">
                                   <h1 class="h2">Register</h1>
                                 </div>
                                   <div class="form-group mb-3">
-                                      <label for="name" class="form-label font-weight-bold">Name</label>
-                                      <input id="name" class="form-control" name="name" type="text">
+                                      <label for="name" class="form-label font-weight-bold">Name <span class="text-danger">*</span></label>
+                                      <input id="name" class="form-control" name="name" type="text" required>
                                   </div>
                                   <div class="form-group mb-3">
                                       <label for="email" class="form-label font-weight-bold">Email Address</label>
